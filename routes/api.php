@@ -20,3 +20,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/', [ProdutoController::class, 'index']);
+
+Route::delete('/{id}', [ProdutoController::class, 'destroy']);
