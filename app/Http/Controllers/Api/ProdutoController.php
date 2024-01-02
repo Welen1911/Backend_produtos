@@ -30,7 +30,13 @@ class ProdutoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Produto::create([
+            'name' => $request->name,
+        ]);
+
+        $produtos = Produto::all();
+
+        return response()->json($produtos, 201);
     }
 
     /**
