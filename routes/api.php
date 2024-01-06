@@ -23,6 +23,8 @@ Route::get('/', [ProdutoController::class, 'index']);
 
 Route::post('/', [ProdutoController::class, 'store']);
 
+Route::put('/{id}', [ProdutoController::class, 'update']);
+
 Route::delete('/{id}', [ProdutoController::class, 'destroy']);
 
 

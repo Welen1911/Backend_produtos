@@ -60,7 +60,14 @@ class ProdutoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $produto = Produto::find($id);
+        $produto->update([
+            'name' => $request->name,
+        ]);
+
+        $produtos = Produto::all();
+
+        return response()->json($produtos, 200);
     }
 
     /**
